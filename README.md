@@ -5,5 +5,5 @@ Je les ai clean des accents et j'ai retire les caracteres speciaux.
 
 
 ```bash
-cat file.txt tr '[:upper:]' '[:lower:]' | sed 's/[ëèé]/e/g' | sed 's/[äâ]/a/g' | cut -d \' -f 2 | grep -v '[[:punct:]]' | grep -v '[[:digit:]]' | sort -u 
+cat file.txt | tr '[:upper:]' '[:lower:]' | sed 's/[ëèé]/e/g' | sed 's/[àäâ]/a/g'| sed 's/[îï]/i/g'| cut -d \' -f 2 | grep -v '[[:punct:]]'| grep -v '[[:space:]]' | grep -v '[[:digit:]]' | sort -u 
 ```
